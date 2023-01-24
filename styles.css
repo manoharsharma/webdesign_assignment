@@ -1,0 +1,93 @@
+/* Navigation container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+}
+/* Navigation links */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  transition: all 0.2s ease-in-out;
+}
+/* Hover effect for links */
+.navbar a:hover {
+  color: #ccc;
+}
+/* Navigation logo */
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 20px;
+}
+/* Animation classes */
+.navbar.navbar-slide-in {
+  animation: slide-in 0.5s forwards;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Dim the background */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%; /* Width of modal */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: purple;
+}
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Background overlay */
+.overlay {
+  display: none; /* Initially hidden */
+  position: fixed; /* Stay in place */
+  z-index: 0; /* Sit behind the modal */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.6); /* Dim the background */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(218, 111, 111);
+  color: #fff;
+}

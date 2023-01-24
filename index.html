@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coderush Assignment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Responsive grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 16px;
+    }
+    /* Folder container */
+    .folder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid #ccc;
+    }
+    /* Folder icon */
+    .folder .icon {
+      font-size: 48px;
+    }
+    /* Folder name */
+    .folder .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    /* Folder description */
+    .folder .description {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-slide-in">
+    <div class="logo">Education</div>
+    <a href="#">Home</a>
+    <a href="#">About Me</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="navbar">
+    <div class="left">
+      <div class="profile">
+        <img src="profile-pic.png" alt="Profile Picture">
+        <p>Welcome, People</p>
+      </div>
+    </div>
+    <div class="middle">
+      <p>Menu Here</p>
+    </div>
+    <div class="right">
+      <div class="settings">
+        <a href="#settings"><i class="fa fa-cog" aria-hidden="true"></i></a>
+      </div>
+      <div class="user">
+        <a href="#user"><i class="fa fa-user" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="folder">
+      <i class="icon fa fa-folder"></i>
+      <div class="name">Folder 1</div>
+      <div class="description">Hi, this is folder 1</div>
+    </div>
+    <div class="folder">
+      <i class="icon fa fa-folder"></i>
+      <div class="name">Folder 2</div>
+      <div class="description">Hi, this is folder 2</div>
+    </div>
+    <div class="folder">
+      <i class="icon fa fa-folder"></i>
+      <div class="name">Folder 3</div>
+      <div class="description">Hi, this is folder 3</div>
+    </div>
+    <div class="folder">
+      <i class="icon fa fa-folder"></i>
+      <div class="name">Folder 4</div>
+      <div class="description">Hi, this is folder 4</div>
+    </div>
+  </div>
+  <button id="open-modal-button">Open Modal</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Successfully tested this Modal button</p>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <script>
+    // Get the modal and button elements
+    var modal = document.getElementById("modal");
+    var openModalButton = document.getElementById("open-modal-button");
+    var close = document.getElementsByClassName("close")[0];
+    var overlay = document.getElementsByClassName("overlay")[0];
+
+    // Open the modal when the button is clicked
+    openModalButton.onclick = function() {
+      modal.style.display = "block";
+      overlay.style.display = "block";
+    }
+
+    // Close the modal when the close button is clicked
+    close.onclick = function() {
+      modal.style.display = "none";
+      overlay.style.display = "none";
+    }
+
+    // Close the modal when clicking outside of the modal
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
